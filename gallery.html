@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Gallery</title>
+	<meta name="author" content="Avenir Gallery">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">  
+	<style type="text/css">
+	
+	body {
+		background-color: #E9E9E9;
+		color: #333;
+		font-family:"Lucida handwriting", "Snell Roundhand", "Helvetica Neue",Arial,Helvetica,sans-serif;
+		font-size: 16px;
+	}
+	
+	.amp {
+		font-family:Garamond,Baskerville,Georgia,serif !important;
+		font-style:italic;
+		font-weight:normal;
+		border: none;
+	}
+	
+	a.polaroid {
+		display: block;
+		text-decoration: none;
+		color: #333;
+		padding: 10px 10px 20px 10px;
+		width: 150px;
+		border: 1px solid #BFBFBF;
+		background-color: white;
+		z-index: 2;
+		font-size: 0.7em;
+		-webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+		-moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+		box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+		-webkit-transition: all 0.5s ease-in;
+	}
+	a.polaroid:hover,
+	a.polaroid:focus,
+	a.polaroid:active {
+		z-index: 999;
+		border-color: #6A6A6A;
+		-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+		-webkit-transform: rotate(0deg) scale(1.05);
+		-moz-transform: rotate(0deg) scale(1.05);
+		transform: rotate(0deg) scale(1.05);
+	}
+	.polaroid img {
+		margin: 0 0 15px;
+		width: 150px;
+		height: 150px;
+	}
+	
+	a img {
+		border: none;
+		display: block;
+	}
+	
+	.photo-album {
+		position: relative;
+		width: 80%;
+		margin: 0 auto;
+		max-width: 70em;
+		height: 450px;
+		margin-top: 5em;
+		min-width: 800px;
+		max-width: 900px;
+	}
+	.photo-album .polaroid {
+		position: absolute;
+	}
+	.photo-album h1 {
+		position: absolute;
+		z-index: 5;
+		top: 150px;
+		text-align: center;
+		width: 100%;
+		line-height: 1.9;
+	}
+	.photo-album h1 span {
+		background-color: white;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		padding: 0.4em 0.8em 0.3em 0.8em;
+		-webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+		-moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+		box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+		border: 1px solid #6A6A6A;
+	}
+	.photo-album .small {
+		width: 75px;
+		padding: 6px 6px 12px 6px;
+		font-size: 0.6em;
+	}
+	.photo-album .small img {
+		width: 75px;
+		height: 75px;
+	}
+	.photo-album .medium {
+		width: 200px;
+		padding: 13px 13px 26px 13px;
+		font-size: 0.8em;
+	}
+	.photo-album .medium img {
+		width: 200px;
+		height: 200px;
+	}
+	.photo-album .large {
+		width: 300px;
+		padding: 20px 20px 30px 20px;
+		font-size: 1em;
+	}
+	.photo-album .large img {
+		width: 300px;
+		height: 300px;
+	}
+	.photo-album .img1 {
+		bottom: 10px;
+		right: 365px;
+		-webkit-transform: rotate(10deg);
+		-moz-transform: rotate(10deg);
+		transform: rotate(10deg);
+	}
+	.photo-album .img2 {
+		top: 50px;
+		right: 20px;
+		-webkit-transform: rotate(-4deg);
+		-moz-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+	}
+	.photo-album .img3 {
+		left: 400px;
+		top: 0;
+		-webkit-transform: rotate(-5deg);
+		-moz-transform: rotate(-5deg);
+		transform: rotate(-5deg);
+	}
+	.photo-album .img4 {
+		top: 10px;
+		left: 495px;
+		-webkit-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg);
+		transform: rotate(-20deg);
+	}
+	.photo-album .img5 {
+		bottom: 0;
+		right: 0;
+		-webkit-transform: rotate(1deg);
+		-moz-transform: rotate(1deg);
+		transform: rotate(1deg);
+	}
+	.photo-album .img6 {
+		bottom: 10px;
+		right: 156px;
+		-webkit-transform: rotate(6deg);
+		-moz-transform: rotate(6deg);
+		transform: rotate(6deg);
+	}
+	.photo-album .img7 {
+		bottom:0;
+		left:400px;
+		-webkit-transform: rotate(-10deg);
+		-moz-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+	}
+	.photo-album .img8 {
+		bottom: -20px;
+		left: 700px;
+		-webkit-transform: rotate(-8deg);
+		-moz-transform: rotate(-8deg);
+		transform: rotate(-8deg);
+	}
+	.photo-album .img9 {
+		bottom: 0;
+		left: 0;
+		-webkit-transform: rotate(-8deg);
+		-moz-transform: rotate(-8deg);
+		transform: rotate(-8deg);
+	}
+	.photo-album .img10 {
+		top: 0;
+		left: 20px;
+		-webkit-transform: rotate(8deg);
+		-moz-transform: rotate(8deg);
+		transform: rotate(8deg);
+	}
+	.photo-album .img11 {
+		top: 0;
+		right: 0;
+		-webkit-transform: rotate(-8deg);
+		-moz-transform: rotate(-8deg);
+		transform: rotate(-8deg);
+	}
+	.photo-album .img12 {
+		top: 0;
+		left: 680px;
+		-webkit-transform: rotate(18deg);
+		-moz-transform: rotate(18deg);
+		transform: rotate(18deg);
+	}
+	.photo-album .img13 {
+		bottom: -20px;
+		right: 630px;
+		-webkit-transform: rotate(4deg);
+		-moz-transform: rotate(4deg);
+		transform: rotate(4deg);
+	}
+	.photo-album .img14 {
+		top: 90px;
+		left: 430px;
+		-webkit-transform: rotate(15deg);
+		-moz-transform: rotate(15deg);
+		transform: rotate(15deg);
+	}
+	.photo-album .img15 {
+		left:176px;
+		top:20px;
+		-webkit-transform: rotate(-8deg);
+		-moz-transform: rotate(-8deg);
+		transform: rotate(-8deg);
+	}
+	
+	a:hover,
+	a:focus {
+		z-index: 5;
+	}
+	
+	
+	
+
+	</style>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style1.css">
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38381756-1']);
+  _gaq.push(['_setDomainName', 'avenirnsec.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+	<header> 	
+
+		<div class="menu-fixed">
+
+			<!--start: Container -->
+			<div class="container">
+
+				<!--start: Row -->
+				<div class="row">
+				
+					<a href="homepage.html" class="logo"><span>Avenir2013</span></a>
+
+					<!--start: Navigation -->	
+					<div class="navbar navbar-inverse">
+			    		<div class="navbar-inner">
+			          		<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar collapsed">
+								<span class="icon-reorder"></span>
+			          		</a>						
+							<div class="nav-collapse collapse">
+								<ul class="nav pull-right">
+									<li class=""><a href="homepage.html" data-target=".nav-collapse">Home</a></li>
+								</ul>
+							</div>		
+						</div>		
+					</div><!--end: Navigation -->
+
+				</div><!--end: Row -->
+			</div><!--end: Container -->
+
+		</div>
+
+	</header><!--end: Header -->
+	<br/><br/><br/><br/>
+	<div class="container">
+	<div class="row">
+	<div class="span12">	
+		<div class="title">
+			<h2>Avenir and Phoenix Gallery Pics</h2>
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="photo-album">
+		
+		
+		
+		<a href="#" class="large polaroid img1"><img src="img/gallery/volcanic.jpg" alt="">This breathtaking volcanic lake is at Wai-O-Tapu Thermal Wonderland</a>
+		<a href="#" class="polaroid img2"><img src="img/gallery/waterfall.jpg" alt="">This lovely waterfall was at Rotorua in Rainbow Springs</a>
+		<a href="#" class="small polaroid img3"><img src="img/gallery/leaf.jpg" alt="">Ferntastic</a>
+		
+		<a href="#" class="medium polaroid img4"><img src="img/gallery/whale.jpg" alt="">At Kaikoura we went whale watching!</a>
+		
+		<a href="#" class="polaroid img5"><img src="img/gallery/seal.jpg" alt="">Found this little cutie on a walk in New Zealand!</a>
+		
+		
+		<a href="#" class="polaroid img6"><img src="img/gallery/lake.jpg" alt="">An amazing bubbling volcanic spring, a bit muddy</a>
+		
+		<a href="#" class="polaroid img7"><img src="img/gallery/simon.jpg" alt="">Simon in a giant Kiwi, pretending to be a Kiwi (the bird)</a>
+		<a href="#" class="small polaroid img8"><img src="img/gallery/albatross.jpg" alt="">Albatross in Dunedin</a>
+		<a href="#" class="medium polaroid img9"><img src="img/gallery/raft.jpg" alt="">White water rafting in Queenstown</a>
+		<a href="#" class="polaroid img10"><img src="img/gallery/whiteisland.jpg" alt="">White Island</a>
+		<a href="#" class="small polaroid img11"><img src="img/gallery/sulphur.jpg" alt="">Sulphurous</a>
+		<a href="#" class="small polaroid img12"><img src="img/gallery/sealions.jpg" alt="">Sea lions!</a>
+		<a href="#" class="small polaroid img13"><img src="img/gallery/horses.jpg" alt="">Horse riding</a>
+		<a href="#" class="small polaroid img14"><img src="img/gallery/camping.jpg" alt="">Stewart Island</a>
+		<a href="#" class="polaroid img15"><img src="img/gallery/us.jpg" alt="">Us in a blue cave on the Franz Josef glacier</a>
+
+	</div>
+	
+	
+
+
+</body>
+</html>

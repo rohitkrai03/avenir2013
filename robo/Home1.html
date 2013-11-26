@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--this design was created by Vacant (Chris Blunden), http://www.web-site.tk .              
+Deep, version 1.5 created on 17/10/04 for OSWD.org ... DO NOT REMOVE this notice. Thanks. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	
+	<title>Robonix</title>
+	<link rel="stylesheet" type="text/css" href="style1.css" />
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js'></script> 
+		
+		
+	<script type="text/javascript" src="domtab.js"></script>
+	<script type="text/javascript">
+		document.write('<style type="text/css">');    
+		document.write('div.domtab div{display:none;}<');
+		document.write('/s'+'tyle>');    
+    </script>
+	
+<!-- This page fully validates as XHTML 1.0 Strict on validator.w3.org (this notice can be removed) -->
+	
+	</head>
+
+	<body>
+		
+			
+				   <div id="content">
+					  	   				
+						<div class="domtab">
+	<ul class="domtabs">
+		<li><a href="#what">Problem Statement</a></li>
+		<li><a href="#how">Rules</a></li>
+		<li><a href="#dl">Arena</a></li>
+		<li><a href="#style">Contacts</a></li>
+		<!--<li><a href="#dl">Download</a></li>-->
+	</ul>
+	<div>
+		<h2><a name="what" id="what">Problem Statment</a></h2>
+		<p>DOMtab is a JavaScript that turns a list of links connected to content
+		sections into a tab interface. The script removes any "back to top" links 
+		in the section and automatically hides all but the first one when the 
+		page is loaded. You can use as many tabbed menus on the page as you want 
+		to.</p>
+		<p><strong>New:</strong> If the URL of the page links directly to one of the tabs it get automatically 
+		highlighted.</p>
+		<p>You can define with an extra class if you want previous and next links 
+		or not.</p>
+		<p>DOMtab uses Unobtrusive JavaScript and does not have any global functions or variables. This page uses DOMtab.</p>		
+		<p><strong>To do:</strong> internal links highlighting tabs (too busy for that now)</p>
+		<p><a href="http://www.wait-till-i.com/index.php?p=242">Comment on the Blog</a></p>
+		<p><a href="https://www.paypal.com/xclick/business=donations%40onlinetools.org&#38;return=http%3A//www.onlinetools.org/ohcheers.php&#38;cancel_return=http%3A//onlinetools.org/">Donations help me buy coffee to stay awake!</a></p>
+		<p><a href="#top">back to menu</a></p>
+	</div>
+	<div>
+		<h2><a name="how" id="how">Rules:</a></h2>
+		<p>DOMtab is a JavaScript that turns a list of links connected to content
+		sections into a tab interface. The script removes any "back to top" links 
+		in the section and automatically hides all but the first one when the 
+		page is loaded. You can use as many tabbed menus on the page as you want 
+		to.</p>
+		
+	</div>
+	<div>
+		<h2><a name="pr" id="pr">Arena:</a></h2>
+		<p>In this version I added the option to have previous and next links 
+		to navigate around the tabs in addition to clicking them.</p>
+		<p>If you want DOMtab to generate those, all you need to do is to 
+		add the class &#34;doprevnext&#34; in addition to the domtab class to 
+		the div in question:</p>
+<pre><code>&#60;div class=&#34;domtab <strong>doprevnext</strong>&#34;&#62;
+  &#60;ul class=&#34;domtabs&#34;&#62;
+    &#60;li&#62;&#60;a href=&#34;#t1&#34;&#62;Test 1&#60;/a&#62;&#60;/li&#62;
+    &#60;li&#62;&#60;a href=&#34;#t2&#34;&#62;Test 2&#60;/a&#62;&#60;/li&#62;
+    &#60;li&#62;&#60;a href=&#34;#t3&#34;&#62;Test 3&#60;/a&#62;&#60;/li&#62;
+    &#60;li&#62;&#60;a href=&#34;#t4&#34;&#62;Test 4&#60;/a&#62;&#60;/li&#62;
+  &#60;/ul&#62;
+  [... ad nauseam...]
+&#60;/div&#62;</code></pre>
+<p>DOMtab then generates the following link list in each of the sections, automatically 
+removing the previous link in the first and the next in the last section:</p>
+<pre><code>&#60;ul class=&#34;prevnext&#34;&#62;
+  &#60;li class=&#34;prev&#34;&#62;&#60;a href=&#34;#&#34;&#62;previous&#60;/a&#62;&#60;/li&#62;
+  &#60;li class=&#34;next&#34;&#62;&#60;a href=&#34;#&#34;&#62;next&#60;/a&#62;&#60;/li&#62;
+ &#60;/ul&#62;</code></pre>
+<p>Once again, you can override any of these settings in the script's parameters:</p>
+<pre><code>prevNextIndicator:'doprevnext', // class to trigger links
+prevNextClass:'prevnext', // class of the prev and next list
+prevLabel:'previous', // HTML content of the prev link
+nextLabel:'next', // HTML content of the next link
+prevClass:'prev', // class for the prev link
+nextClass:'next', // class for the next link
+</code></pre>
+<p>Both labels are set via innerHTML rather than the proper method :-). This allows you to
+use images if wanted:</p>
+<pre><code>prevLabel:'&#60;img src=&#34;massivebuttonprev.png&#34; alt=&#34;previous&#34; /&#62;',</code></pre>
+		<p><a href="#top">back to menu</a></p>
+	</div>
+	<div>
+		<h2><a name="style" id="style">Contacts</a></h2>
+		<p>Using the mandatory classes domtab for the main DIV of each menu, 
+		and domtabs for the menu list, you can pretty much style your menus 
+		any way you want to.</p>
+		<p>DOMtab adds the class "active" to the LI containing the currently 
+		active link, to allow you to highlight the currently chosen tab.</p>
+		<p>The previous and next links get classes on their own, which makes 
+		it easy to style them differently.</p>
+		<p>The showing and hiding of the sections is done via JavaScript using 
+		display block and none. It would be pretty easy to replace this with 
+		a styleable show and hide class, if you want to have that, please 
+		contact me on the blog.</p>
+		<p>If you want to avoid the initial flash of all the content until the 
+		script kicks in, you can cheat by adding the following code in the head
+		right after the script element with the domtab call:</p>
+<pre><code>
+&#60;script type=&#34;text/javascript&#34;&#62;
+  document.write('&#60;style type=&#34;text/css&#34;&#62;');    
+  document.write('div.domtab div{display:none;}&#60;');
+  document.write('/s'+'tyle&#62;');    
+&#60;/script&#62;
+</code></pre>
+		<p><a href="#top">back to menu</a></p>
+	</div>
+	<div>
+		<h2><a name="dl" id="dl">Arena:</a></h2>
+<p>DOMtab is provided as-is and I don't take any responsibility for any problems 
+that might occur for using it.</p>
+<p>It is free to use, but not free to resell. If you want to use DOMtab in a 
+commercial site/product please contact me.</p>
+<ul>
+	<li><a href="domtab.zip">DOMtab version 3.1415927</a>
+</ul>
+
+		<p><a href="#top">back to menu</a></p>
+	</div>
+</div>
+						<br style='clear: both' /> 
+				
+				</div> 
+					 
+					 
+		
+	</body>
+
+</html>

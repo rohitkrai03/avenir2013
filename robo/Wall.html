@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--this design was created by Vacant (Chris Blunden), http://www.web-site.tk .              
+Deep, version 1.5 created on 17/10/04 for OSWD.org ... DO NOT REMOVE this notice. Thanks. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />ss
+	<title>Robonix</title>
+	<link rel="stylesheet" type="text/css" href="style1.css" />
+	
+		
+		
+	<script type="text/javascript" src="domtab.js"></script>
+	<script type="text/javascript">
+		document.write('<style type="text/css">');    
+		document.write('div.domtab div{display:none;}<');
+		document.write('/s'+'tyle>');    
+    </script>
+	
+<!-- This page fully validates as XHTML 1.0 Strict on validator.w3.org (this notice can be removed) -->
+	
+	</head>
+
+	<body>
+		
+			
+				   <div id="content">
+					  	   				
+						<div class="domtab">
+	<ul class="domtabs">
+		<li><a href="#what">Problem Statement</a></li>
+		<li><a href="#how">Rules</a></li>
+		<li><a href="#style">Robot Specification</a></li>
+		<li><a href="#dl">Arena</a></li>
+		<li><a href="#pr">Contacts</a></li>
+	</ul>
+	<div>
+		<h2><a name="what" id="what">Problem Statment</a></h2>
+		 <br/>
+					 <ul>
+                                           <li>> Build an autonomous Robot capable of following white line on a black background using microcontroller.
+In addition to following white line on a black background, the bot must be capable of detecting white walls(placed parallel to the white line and at a distance approximately ~15cm from it).</li>
+                                           <li>> In case the dimension of the bot is <20cm (in width)  then the distance between the white wall and the path will be reduced to 10cm.
+In all other cases the distance will be 15cm.</li>
+                                           <li>> Wall(s) maybe present on the right, left side or both.</li>
+                                           <li>> Immediately after the wall(s) will be an intersection (i.e.  there will be 4 possible paths available to the bot at the Intersection  but only 1 will be correct and lead to the next checkpoint).
+The bot needs to decide which path to take depending on the position of the previous white wall.</li>
+                                           <li>> If the bot encounters a White wall on the left side of the path, then the correct path at the intersection which will lead to the next checkpoint will be on the left.
+</li>
+                                           <li>> Similarly, if the bot encounters a White wall on the right side of the path, then the correct path at the intersection which will lead to the next checkpoint will be on the right.
+IF the bot encounters white walls on both the left and the right side of the path, then the correct path will simply be the one which leads straight.</li>
+                                           <li>> The bot must indicate proper detection of the wall on either side of the path or both (i.e participants can use 2 led of same/different color(s) to indicate which wall was detected by the bot).
+</li></ul>
+                                           <h2>PRELIMS :</h2>
+                                           <ul>
+                                           <li>> All the above general rules apply.</li>
+                                           <li>> The objective of this round is to complete the given track successfully by crossing (or skipping checkpoints at the cost of incurring penalties) the checkpoints in the least amount of time.
+THERE WILL BE NO BREAKS/GAP IN THE PATH IN THIS ROUND.
+</li></ul>
+                                            <h2>FINALS : </h2>
+                                            <ul>
+                                            <li>> All the above general rules apply.</li>
+                                            <li>> The objective of this round is same as that of the prelims.</li>
+                                            <li>> THE PATH HOWEVER WILL HAVE BREAKS/GAPS IN THE PATH EVERYWHERE THERE IS A WALL.</li>
+                                            <li>> The breaks/gaps will be 5-8cm in dimension.
+                                             </li> </ul>
+                                            </div>
+	<div>
+		<h2><a name="how" id="how">Rules:</a></h2>
+		   
+					<br/>
+					<h2>General rule: </h2>
+					<ul>
+					<li>> The bot must be completely autonomous and the participant(s) will not be allowed to 
+						  touch or control the bot after the commencement of the round.</li>
+					<li>> The maximum team size is 4.</li>
+					
+					<li>> The participants must be students of same/different college(s).</li>
+					<li>> A team can have maximum of three restarts.</li>
+					<li>> After every restart, the bot will be placed at the starting point.</li>
+					<li>> After every time-out, the bot will be placed at the last traversed check-point.</li>
+					<li>> The team will incure a penalty for every restart(s) and timeout(s) taken.</li>
+					
+					
+					<li>> The participating team found guilty of damaging the arena in anyway will be penalised or even disqualified.</li>
+					
+					<li>> The decisions of the judges will be final and irrevocable.</li>
+					</ul>
+					<br/>
+					<h2>Event rule: </h2>
+					<ul>
+					<li>> Bot has to be a LINE-FOLLOWER(using MICROCONTROLLER) and capable of detecting WHITE WALLS.</li>
+					<li>> Detection can be shown by glowing led or buzzer.</li>
+					<li>> line will be of 2 cm width.</li>
+					<li>> In the final round, gap of 6cm will be present everywhere there is a wall.</li>
+					<li>> The Bot will be placed at the 'START' position before the commencement of the round.</li>
+					<li>> The objective is to traverse the given track successfully and reach the 'STOP' Position.</li>
+					<li>> Bonus will be awarded for stopping the bot at the STOP mark. The bot must be stationary at the 'STOP' mark for atleast 3s.</li>
+					<li>> The room in which the event will take place will be relatively dark.</li>
+					</ul>
+					
+					
+		
+	</div>
+	<div>
+		<h2><a name="pr" id="pr">Contacts:</a></h2>
+		<p><br/>
+		        <b>Danial jahan warsi</b> +91-8420946322<br/> <b>Email:</b>-jahandaniyal@gmail.com<br/><br/>
+				<b>Rahul Mishra:</b> +91-8981516799<br/> <b>Email:</b>-mishra_2291@yahoo.com<br/><br/>
+				
+				
+						</p>
+		
+	</div>
+	<div>
+		<h2><a name="style" id="style">Robot Specification</a></h2>
+		<ul>
+					<li>> The Bot should fit in cube of 25cm*25cm*25cm.Exceeding this limit will lead to disqualification. </li>
+					
+					<li>> The BOT must be fully autonomous and no human intervention will be allowed after commencement of the round.</li>
+					
+					<li>> The robots can exceed their respective dimensions once the event commences.</li>
+					
+					<li>> LEGO kits or its spare parts are not allowed.</li>
+					<li>> Power can either be onboard or an external power supply can also be used.<li>
+					</ul>
+	</div>
+	<div>
+		<h2><a name="dl" id="dl">Arena:</a></h2>
+					<br/>
+					<a href="arena/wall1-full.jpg" target="_blank"><img src="arena/wall1.jpg" class="img-polaroid" height="300px" width="650px" align="center"/></a>	
+					 <p align="center"><a href="arena/wall1-full.jpg" target="_blank">Click here to Enlarge</a></p>
+					 
+					 <br/>
+					 <a href="arena/wall2-full.jpg" target="_blank"><img src="arena/wall2.jpg" class="img-polaroid" height="300px" width="650px" align="center"/></a>	
+					 <p align="center"><a href="arena/wall2-full.jpg" target="_blank">Click here to Enlarge</a></p>
+					 
+					 <br/>
+					 <a href="arena/wall3-full.jpg" target="_blank"><img src="arena/wall3.jpg" class="img-polaroid" height="300px" width="650px" align="center"/></a>	
+					 <p align="center"><a href="arena/wall3-full.jpg" target="_blank">Click here to Enlarge</a></p>
+					 
+					 <br/>
+	</div>
+</div>
+						<br style='clear: both' /> 
+				
+				</div> 
+					 
+					 
+		
+	</body>
+
+</html>
